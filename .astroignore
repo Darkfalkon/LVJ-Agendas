@@ -1,0 +1,23 @@
+# Ignorar dependencias instaladas
+node_modules/
+
+# Ignorar archivos de salida de Astro
+dist/
+
+# Ignorar caché de dependencias y otros directorios temporales
+.cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Ignorar imágenes grandes o no relacionadas
+Images/raw/   # Si tienes una carpeta con imágenes sin procesar
+Images/temp/
+
+# Ignorar archivos de logs
+*.log
+*.bak
+
+# Ignorar archivos del sistema operativo
+desktop.ini

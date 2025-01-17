@@ -1,0 +1,19 @@
+---
+export interface Props {
+    imgSrc: string;
+    title: string;
+    description: string;
+    inputId: string;
+}
+const { imgSrc, title, description, inputId } = Astro.props;
+---
+<div class="product">
+    <img src={imgSrc} alt={`Imagen de ${title}`}>
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <div class="counter-container">
+        <button type="button" onclick={`decrementValue('${inputId}')`}>-</button>
+        <input type="number" id={inputId} name={inputId} min="1" max="10" value="1">
+        <button type="button" onclick={`incrementValue('${inputId}')`}>+</button>
+    </div>
+</div>

@@ -9,6 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.1.7"
+    "astro": "^5.1.7",
+    "laravel-mix": "^6.0.49"
+  },
+  "devDependencies": {
+    "resolve-url-loader": "^5.0.0"
   }
 }

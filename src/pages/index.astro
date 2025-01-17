@@ -1,11 +1,67 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ProductCard from '../components/ProductCard.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 ---
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Página web LVJ Agendas">
+        <meta name="keywords" content="HTML, Proyecto, Desarrollo web">
+        <meta name="author" content="Jorge Iván Rubiano Martín">
+        <title>LVJ Agendas</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/styles.css">
+        <script src="/script.js" defer></script>
+    </head>
+    <body>
+        <Header />
 
-<Layout>
-	<Welcome />
-</Layout>
+        <main>
+            <section id="inicio">
+                <h2>Inicio</h2>
+                <p>Bienvenidos, sigue para tener el gusto de atenderte</p>
+            </section>
+            <section id="acerca">
+                <h2>Acerca de</h2>
+                <p>Página de agendas y detalles para toda ocasión</p>
+            </section>
+
+            <section id="productos">
+                <h2>Nuestros Productos</h2>
+                <div class="product-list">
+                    <ProductCard imgSrc="/Images/PORTADA MINNIE-02.png" title="Agenda Minnie" description="Una agenda personalizada con los colores que desees, pero con la imagen de Minnie para aquellos que gustan de esta imagen." inputId="cantidad1" />
+                    <ProductCard imgSrc="/Images/PORTADA MINNIE-02.png" title="Calendario" description="Descripción breve del producto." inputId="cantidad2" />
+                    <ProductCard imgSrc="/Images/PORTADA MINNIE-02.png" title="Agenda De Notas" description="Descripción breve del producto." inputId="cantidad3" />
+                    <ProductCard imgSrc="/Images/PORTADA MINNIE-02.png" title="Agenda Harry Potter" description="Descripción breve del producto." inputId="cantidad4" />
+                </div>
+            </section>
+
+            <section id="contacto">
+                <h2>Contacto</h2>
+                <form action="#" method="post">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="dataConsent" name="dataConsent" required>
+                        <label for="dataConsent">
+                            He leído y acepto la
+                            <a href="/privacy-policy" target="_blank">política de privacidad</a>.
+                        </label>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </main>
+
+        <Footer />
+        <WhatsAppFloat />
+    </body>
+</html>
