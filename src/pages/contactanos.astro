@@ -3,7 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,8 +12,8 @@ import Footer from '../components/Footer.astro';
     <meta name="author" content="Jorge Iván Rubiano Martín" />
     <title>Contáctanos - LVJ Agendas</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
-    <link href="stylesheet" href="/styles.css">
-    <script src="scripts/script.js" is:inline defer></script>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="scripts/captcha.js" defer></script>
   </head>
   <body>
     <Header />
@@ -47,7 +47,6 @@ import Footer from '../components/Footer.astro';
         </section>
     </main>
     <Footer />
-    <script src="/scripts/captcha.js" defer></script>
   </body>
 </html>
   
