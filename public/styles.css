@@ -75,7 +75,7 @@ header {
 
 header h1 {
     color: #000;
-    margin-top: -40px;
+    margin-top: -45px;
     margin-bottom: 0;
     text-align: center;
 }
@@ -136,7 +136,7 @@ nav ul li a {
 }
 
 section {
-    padding: 2em;
+    padding: 2rem;
 }
 
 .counter-container {
@@ -171,8 +171,8 @@ section {
 .counter-container input[type="number"] {
     -moz-appearance: textfield;
     appearance: textfield;
-    width: 50px;
-    height: 30px;
+    width: 30px;
+    height: 20px;
     text-align: center;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -233,7 +233,7 @@ header .social-bar {
     justify-content: flex-end;
     gap: 1rem;
     margin-bottom: 0.5rem;
-    margin-right: 7 rem;
+    margin-right: 7rem;
     background-color: #DCD0FF;
     padding: 10px;
 }
@@ -278,16 +278,19 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 20px;
+    padding: 10px;
     background-color: #f9f9f9;
     border-radius: 8px;
+    height: 300px;
+    margin-bottom: 0.3rem;
 }
 
 form input[type="text"], form input[type="email"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 12px;
+    margin-bottom: 0.3rem;
 }
 
 form button[type="submit"] {
@@ -301,33 +304,37 @@ form button[type="submit"] {
 }
 
 .formulario-extendido {
-    display: flex;
+    display: flexbox;
     flex-direction: column;
     max-width: 600px;
-    margin: 0 auto; /* Centrar el formulario */
-    padding: 20px;
+    height: 900px;
+    margin: auto; /* Centrar el formulario */
+    padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    padding-top: 0;
 }
 
 .formulario-extendido h1 {
-    font-size: 1.8em;
     text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #000;
 }
 
 .formulario-extendido label {
     display: block;
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
     color: #333;
 }
 
 .formulario-extendido input,
 .formulario-extendido textarea {
+    font-family:Roboto-Italic-VariableFont_wdth_wght;
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -335,11 +342,13 @@ form button[type="submit"] {
     border-radius: 4px;
     font-size: 16px;
     box-sizing: border-box;
+    resize: vertical;
+    outline: none;
 }
 
 .formulario-extendido input::placeholder,
 .formulario-extendido textarea::placeholder {
-    font-size: Roboto-Italic-VariableFont_wdth_wght;
+    font-size: 1rem;
     color: #aaa;
 }
 
@@ -356,8 +365,13 @@ form button[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
+.formulario-extendido input:focus
+.formulario-extendido textarea:focus {
+    font-family: Roboto-Italic-VariableFont_wdth,wght;
+}
+
 .formulario-extendido button:hover {
-    background-color: #0056b3;
+    background-color: #B666D2;
 }
 
 .captcha-container-contacto {
