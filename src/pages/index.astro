@@ -1,24 +1,15 @@
 ---
+import Head from '../components/Head.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ProductCard from '../components/ProductCard.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 ---
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Página web LVJ Agendas">
-        <meta name="keywords" content="HTML, Proyecto, Desarrollo web">
-        <meta name="author" content="Jorge Iván Rubiano Martín">
-        <title>LVJ Agendas</title>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="/styles.css">
-        <script src="/script.js" defer></script>
-    </head>
+    <Head title="LVJ Agendas" description="Explora nuestras agendas personalizadas y más"/>
+    <script src="scripts/cantidad_productos.js" defer></script>
     <body>
         <Header />
-
         <main>
             <section id="inicio">
                 <h2>Inicio</h2>
@@ -31,10 +22,32 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro';
             <section id="productos">
                 <h2>Nuestros Productos</h2>
                 <div class="product-list">
-                    <ProductCard imgSrc="/Images/PORTADA MINNIE-02.png" title="Agenda Minnie" description="Una agenda personalizada con los colores que desees, pero con la imagen de Minnie para aquellos que gustan de esta imagen." inputId="cantidad1" />
-                    <ProductCard imgSrc="/Images/PORTADA MINNIE-02.png" title="Calendario" description="Descripción breve del producto." inputId="cantidad2" />
-                    <ProductCard imgSrc="/Images/PORTADA MINNIE-02.png" title="Agenda De Notas" description="Descripción breve del producto." inputId="cantidad3" />
-                    <ProductCard imgSrc="/Images/PORTADA MINNIE-02.png" title="Agenda Harry Potter" description="Descripción breve del producto." inputId="cantidad4" />
+                    <ProductCard imgSrc="/Images/PORTADA_MINNIE-02.png" 
+                        title="Agenda Minnie" 
+                        description="Una agenda personalizada con los colores que desees." 
+                        inputId="cantidad1"
+                    />
+                    
+                    <ProductCard 
+                        imgSrc="/Images/PORTADA_MINNIE-02.png" 
+                        title="Calendario" 
+                        description="Descripción breve del producto." 
+                        inputId="cantidad2"
+                    />
+                    
+                    <ProductCard 
+                        imgSrc="/Images/PORTADA_MINNIE-02.png" 
+                        title="Agenda De Notas" 
+                        description="Descripción breve del producto." 
+                        inputId="cantidad3" 
+                    />
+                    
+                    <ProductCard 
+                        imgSrc="/Images/PORTADA_MINNIE-02.png" 
+                        title="Agenda Harry Potter" 
+                        description="Descripción breve del producto." 
+                        inputId="cantidad4"
+                    />
                 </div>
             </section>
 
@@ -42,10 +55,10 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro';
                 <h2>Suscribete para obtener las últimas novedades y ofertas</h2>
                 <form action="#" method="post">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre" aria-label="Nombre">
 
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required placeholder="Ingresa tu email" aria-label="Email">
 
                     <div class="checkbox-container">
                         <input type="checkbox" id="dataConsent" name="dataConsent" required>

@@ -1,14 +1,68 @@
 ---
-export interface Props {
-    imgSrc: string;
-    title: string;
-    description: string;
-    inputId: string;
-}
 const { imgSrc, title, description, inputId } = Astro.props;
 ---
-<div class="product">
-    <img src={imgSrc} alt={`Imagen de ${title}`}>
+
+<div class="product-card">
+  <img src={imgSrc} alt={title} loading="lazy">
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <div class="counter-container-productos">
+    <button type="button" class="decrement-btn" data-input-id={inputId}>-</button>
+    <input type="number" id={inputId} name={inputId} min="1" max="10" value="1">
+    <button type="button" class="increment-btn" data-input-id={inputId}>+</button>
+  </div>
+</div>
+
+<!-- Modificación inservible -->
+<!-- ---
+import { description, title } from "./Head.astro";
+import { inputId } from "./ProductCard.astro.0.mts";
+import { imgSrc } from "./ProductCard.astro.0.mts";
+---
+
+<script>
+    export let imgSrc = "";
+    export let title = "";
+    export let description = "";
+    export let inputId = "";
+
+    function decrementValue () {
+        const input = document.getElementById(inputId);
+        if (input && input.value > 1) {
+            input.value = parseInt(input.value) - 1;
+        }
+    }
+    
+    function incrementValue() {
+        const input = document.getElementById(inputId);
+        if(input && input.value < 10) {
+            input.value =parseInt(input.value) + 1;
+        }
+    }
+</script>
+
+<div class="product-card">
+    <img src={imgSrc} alt={title} loading="lazy">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <div class="couter-container">
+        <button type="button" on:click={decrementValue}>-</button>
+        <input type="number" id={inputId} name={inputId} min="1" max="10" value="1">
+        <button type="button" on:click={incrementValue}>+</button>
+    </div>
+</div> -->
+
+<!-- 
+---
+export let imgSrc = "";
+export let title = "";
+export let description = "";
+export let inputId = "";
+---
+
+
+<div class="product-card">
+    <img src={imgSrc} alt={title} loading="lazy">
     <h3>{title}</h3>
     <p>{description}</p>
     <div class="counter-container">
@@ -16,4 +70,4 @@ const { imgSrc, title, description, inputId } = Astro.props;
         <input type="number" id={inputId} name={inputId} min="1" max="10" value="1">
         <button type="button" onclick={`incrementValue('${inputId}')`}>+</button>
     </div>
-</div>
+</div> -->
