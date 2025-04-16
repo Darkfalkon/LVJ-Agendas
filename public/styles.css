@@ -293,36 +293,57 @@ header .social-bar a:hover {
     background-color: #20b455;
 }
 
-/* Contenedor del formulario en horizontal */
+/* Formulario para suscripción*/
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 10px;
+    gap: 8px;
+    padding: 16px;
     background-color: #f9f9f9;
     border-radius: 8px;
+    width: 400px;
     height: 300px;
-    margin-bottom: 0.3rem;
+    margin: 0.5rem auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-form input[type="text"], form input[type="email"] {
-    padding: 10px;
+form input[type="text"], 
+form input[type="email"] {
+    padding: 8px 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 12px;
-    margin-bottom: 0.3rem;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 0.2rem;
 }
 
 form button[type="submit"] {
-    padding: 10px 20px;
+    padding: 10px;
     background-color: #DCD0FF;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     color: #000;
     font-size: 14px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+form button [type="submit"]:hover {
+    background-color: #c8b4ff;
+}  
+
+.checkbox-container-newsletter {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    flex-wrap: wrap;
+}
+
+.checkbox-container-newsletter label {
+    font-size: 11px;
+}
+
+/* Formulario de contacto extendido */
 .formulario-extendido {
     display: flexbox;
     flex-direction: column;
@@ -432,6 +453,7 @@ form button[type="submit"] {
     outline: none;
 }
 
+/* Formato Submenú */
 nav ul .submenu-container:hover .submenu {
     display: block;
 }

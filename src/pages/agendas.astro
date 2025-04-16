@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProductCard from "../components/ProductCard.astro";
+---
+
+<BaseLayout>
+    <section id="página de productos">
+        <h2>Todos nuestros productos</h2>
+        <p>Mira nuestras agendas disponibles</p>
+        <div>
+            <ProductCard 
+                imgSrc="/Images/PORTADA_MINNIE-02.png"
+                title="Agenda Minnie"
+                description="Agenda de Personalizada con colores a tu gusto."
+                input="cantidad1"
+            />
+            <ProductCard 
+                imgSrc="/Images/PORTADA_MINNIE-02.png"
+                title="Agenda Marvel"
+                description="Calendario de pared o escritorio personalizado"
+                inputId="cantidad2"
+            />
+            <ProductCard 
+                imgSrc="/Images/PORTADA_MINNIE-02.png" 
+                title="Agenda De Notas" 
+                description="Descripción breve del producto." 
+                inputId="cantidad3" 
+            />
+            <ProductCard
+                imgSrc="/Images/PORTADA_MINNIE-02.png" 
+                title="Agenda Harry Potter" 
+                description="Descripción breve del producto." 
+                inputId="cantidad4"
+            />
+        </div>
+    </section>
+</BaseLayout>

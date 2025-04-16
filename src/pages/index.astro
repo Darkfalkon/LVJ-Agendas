@@ -1,79 +1,72 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Head from '../components/Head.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import ProductCard from '../components/ProductCard.astro';
-import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 ---
-<html lang="es">
-    <Head title="LVJ Agendas" description="Explora nuestras agendas personalizadas y más"/>
-    <script src="scripts/cantidad_productos.js" defer></script>
-    <body>
-        <Header />
-        <main>
-            <section id="inicio">
-                <h2>Inicio</h2>
-                <p>Bienvenidos, sigue para tener el gusto de atenderte</p>
-            </section>
-            <section id="acerca">
-                <h2>Acerca de</h2>
-                <p>Página de agendas y detalles para toda ocasión</p>
-            </section>
-            <section id="productos">
-                <h2>Nuestros Productos</h2>
-                <div class="product-list">
-                    <ProductCard imgSrc="/Images/PORTADA_MINNIE-02.png" 
-                        title="Agenda Minnie" 
-                        description="Una agenda personalizada con los colores que desees." 
-                        inputId="cantidad1"
-                    />
+<BaseLayout>
+    <Head slot="head" title="LVJ Agendas" descriptión="Explora nuestras agendas personalizadas y más"/>
+           
+    <section id="inicio">
+        <h2>Inicio</h2>
+        <p>Bienvenidos, sigue para tener el gusto de atenderte</p>
+    </section>
+
+    <section id="acerca">
+        <h2>Acerca de</h2>
+        <p>Página de agendas y detalles para toda ocasión</p>
+    </section>
+
+    <section id ="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="product-list">
+            <ProductCard 
+                imgSrc="/Images/PORTADA_MINNIE-02.png" 
+                title="Agenda Minnie" 
+                description="Una agenda personalizada con los colores que desees." 
+                inputId="cantidad1"
+            />
                     
-                    <ProductCard 
-                        imgSrc="/Images/PORTADA_MINNIE-02.png" 
-                        title="Calendario" 
-                        description="Descripción breve del producto." 
-                        inputId="cantidad2"
-                    />
+            <ProductCard 
+                imgSrc="/Images/PORTADA_MINNIE-02.png" 
+                title="Calendario" 
+                description="Descripción breve del producto." 
+                inputId="cantidad2"
+            />
                     
-                    <ProductCard 
-                        imgSrc="/Images/PORTADA_MINNIE-02.png" 
-                        title="Agenda De Notas" 
-                        description="Descripción breve del producto." 
-                        inputId="cantidad3" 
-                    />
+            <ProductCard 
+                imgSrc="/Images/PORTADA_MINNIE-02.png" 
+                title="Agenda De Notas" 
+                description="Descripción breve del producto." 
+                inputId="cantidad3" 
+            />
                     
-                    <ProductCard 
-                        imgSrc="/Images/PORTADA_MINNIE-02.png" 
-                        title="Agenda Harry Potter" 
-                        description="Descripción breve del producto." 
-                        inputId="cantidad4"
-                    />
-                </div>
-            </section>
+            <ProductCard 
+                imgSrc="/Images/PORTADA_MINNIE-02.png" 
+                title="Agenda Harry Potter" 
+                description="Descripción breve del producto." 
+                inputId="cantidad4"
+            />
+        </div>
+    </section>
 
-            <section id="contacto">
-                <h2>Suscribete para obtener las últimas novedades y ofertas</h2>
-                <form action="#" method="post">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre" aria-label="Nombre">
+    <section id="contacto">
+        <h2>Suscribete para obtener las últimas novedades y ofertas</h2>
+        <form action="#" method="post">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre" aria-label="Nombre">
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="Ingresa tu email" aria-label="Email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Ingresa tu email" aria-label="Email">
 
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="dataConsent" name="dataConsent" required>
-                        <label for="dataConsent">
-                            He leído y acepto la
-                            <a href="/privacy-policy" target="_blank">política de privacidad</a>.
-                        </label>
-                    </div>
+            <div class="checkbox-container-newsletter">
+                <input type="checkbox" id="dataConsent" name="dataConsent" required>
+                <label for="dataConsent">
+                    He leído y acepto la
+                    <a href="/privacy-policy" target="_blank">política de privacidad</a>.
+                </label>
+            </div>
 
-                    <button type="submit">Enviar</button>
-                </form>
-            </section>
-        </main>
-
-        <Footer />
-        <WhatsAppFloat />
-    </body>
-</html>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</BaseLayout>
