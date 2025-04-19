@@ -56,6 +56,7 @@ header {
     color: #000;
     text-align: center;
     padding: 1em 0;
+    position: relative;
 }
 
 /* Estilo del header h1 */
@@ -172,12 +173,15 @@ section {
 
 /* Estilo del listado de productos */
 .product-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     flex-direction: row;
-    gap: 20px;
+    gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Estilo tarjetas de productos */
@@ -247,24 +251,25 @@ section {
 }
 
 /* Estilo social bar */
-header .social-bar {
+.social-bar {
     display: flex;
     justify-content: flex-end;
-    gap: 1rem;
+    gap: 12px;
     margin-bottom: 0.5rem;
     margin-right: 7rem;
     background-color: #DCD0FF;
     padding: 10px;
+    padding: 8px 20px 0 0;
 }
 
-header .social-bar a {
+.social-bar a {
     color: #000;
     font-size: 40px;
     text-decoration: none;
     transition: transform 0.3s, color 0.3s;
 }
 
-header .social-bar a:hover {
+.social-bar a:hover {
     color: #6A0DAD;
     transform: scale(1.2);
 }
@@ -482,4 +487,123 @@ nav ul .submenu li a {
 
 nav ul .submenu li a:hover {
     background-color: #B666D2;
+}
+
+/* Estilo página de producto Agendas */
+#pagina-productos {
+    padding: 2rem;
+    background-color: #fdfdfd;
+    min-height: 100vh;
+    display: flex;  
+    flex-direction: row;
+    align-items: center;
+}
+
+#pagina-productos h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.product-list-agendas {
+    display: grid;
+    grid-template-columns: repeat   (auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 250px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.counter-container-productos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.counter-container-productos button {
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #DCD0FF;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3 ease;
+}
+
+.counter-container-productos button:hover {
+    background-color: #c0b0f0;
+}
+
+.counter-container-productos input {
+    width: 50px;
+    text-align: center;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo barra de busqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px 20px;
+    gap: 8px;
+}
+
+.search-bar input {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1rem;
+    width: 220px;
+}
+
+.search-bar button {
+    background-color: #DCD0FF;
+    border: none;
+    border-radius: 50%;
+    padding: 8px 10px;
+    cursor: pointer;
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.search-bar button:hover {
+    background-color: #cbb8ff;
 }
